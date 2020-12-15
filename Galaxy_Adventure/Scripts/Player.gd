@@ -4,9 +4,9 @@ onready var timer = $Shoot;
 
 const PROJECTILE = preload("res:///Scenes/Fireball.tscn");
 
-export (int) var speed = 100
+export (int) var speed = 100;
 
-var velocity = Vector2()
+var velocity = Vector2();
 var shoot = true;
 
 func get_input():
@@ -24,7 +24,7 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	
-	if Input.is_action_pressed("ui_down") && shoot == true:
+	if Input.is_action_pressed("Shoot") && shoot == true:
 		shoot = false;
 		var fireball = PROJECTILE.instance();
 		get_parent().add_child(fireball);
