@@ -17,5 +17,10 @@ func _physics_process(delta):
 
 
 func _on_VisibilityNotifier2D_screen_exited():
+	#print("Papafireball");
 	queue_free();
 	pass
+
+func _on_Enemy_Fireball_body_entered(body):
+	queue_free();
+	pass 

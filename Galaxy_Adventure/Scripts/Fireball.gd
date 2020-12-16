@@ -10,5 +10,6 @@ func _physics_process(delta):
 	pass
 
 func _on_VisibilityNotifier2D_screen_exited():
+	#print("Papa friendly fireball");
 	queue_free();
 	pass

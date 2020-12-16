@@ -21,3 +21,17 @@ func _on_Shoot_timeout():
 	get_parent().add_child(fireball);
 	fireball.global_position = $Position2D.global_position;
 	pass
+
+
+func _on_Enemy_area_entered(area):
+	if area.name != "Hitbox":
+		area.queue_free();
+		get_parent().get_parent().set_score(200);
+		queue_free();
+	pass
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	#print("Bye 2");
+	queue_free();
+	pass
