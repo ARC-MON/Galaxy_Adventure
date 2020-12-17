@@ -17,5 +17,5 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="Enemy_Spawn" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 5.0
 [connection signal="timeout" from="Enemy_Spawn" to="." method="_on_Enemy_Spawn_timeout"]

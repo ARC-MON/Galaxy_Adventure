@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Galaxy_Adventure"
 run/main_scene="res://Scenes/TitleScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://Textures/Logo.png"
 
 [display]
 

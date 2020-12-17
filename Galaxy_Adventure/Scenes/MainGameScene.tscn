@@ -8,22 +8,22 @@
 [ext_resource path="res://Scripts/MainGameScene.gd" type="Script" id=6]
 [ext_resource path="res://Textures/Lives 3.png" type="Texture" id=7]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=6]
-font_data = ExtResource( 5 )
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 107.497 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 182.488, 10.2361 )
 
 [sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 107.497 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 182.488, 10.2361 )
+
+[sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 5 )
 
 [node name="Game" type="Node2D"]
@@ -54,7 +54,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="PopupPanel/VBoxContainer"]
 margin_right = 172.0
 margin_bottom = 20.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 text = "GAME OVER"
 align = 1
 
@@ -67,14 +67,14 @@ custom_constants/separation = 16
 [node name="Button" type="Button" parent="PopupPanel/VBoxContainer/VBoxContainer"]
 margin_right = 172.0
 margin_bottom = 26.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 text = "Restart"
 
 [node name="Button2" type="Button" parent="PopupPanel/VBoxContainer/VBoxContainer"]
 margin_top = 42.0
 margin_right = 172.0
 margin_bottom = 68.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 3 )
 text = "Menu"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -88,25 +88,25 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall1"]
 position = Vector2( -10.2233, 88.1958 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="Wall2" type="StaticBody2D" parent="Walls"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2"]
 position = Vector2( 329.915, 92.4001 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="Wall3" type="StaticBody2D" parent="Walls"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3"]
 position = Vector2( 158.83, -10.0138 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 
 [node name="Wall4" type="StaticBody2D" parent="Walls"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4"]
 position = Vector2( 157.574, 190.293 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 215.325, 10.8822 )
@@ -121,7 +121,7 @@ margin_left = 1.0
 margin_top = 160.0
 margin_right = 315.0
 margin_bottom = 180.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 6 )
 text = "SCORE: 000"
 align = 2
 __meta__ = {
